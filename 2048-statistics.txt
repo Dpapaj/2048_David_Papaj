@@ -1,0 +1,16 @@
+30 games of 2048 :
+
+Nejlepšího skóre jsem dosáhl s depth 8 a 6 number of runs, kde to trvalo asi 2-3 hodiny dokončít, ale na konci jsem dostal konečné skóre 58 468.
+K tomu jsem používal různé depth (2-8) a různý number of runs (2-6).
+
+Pro algoritmus jsem vybral funkci BEST MOVE, kde tento kód rekurzivně iteruje stromem hry, dokud nedosáhne požadované depth
+a poté vyhodnotí mřížku na základě heuristiky, kterou jsme zvolili[TEAMPLATE], a pokud je její skóre vyšší než aktuální nejvyšší skóre,
+pak aktualizujeme proměnnou, která obsahuje nejlepší mřížku, aktuální mřížkou a pak tuto mřížku použijeme pro další iteraci nejlepšího pohybu.
+
+Best score: 58,468
+Worst score: 200
+Average score: 15,000-20,000  , closer around 18,000 for games with higher number of runs and bigger depth,
+                              , around 2,000-5000 when using smaller depth and less number of runs
+Number of wins/number of losses: 18/12 (win rate of 60%)
+Average achieved value of the maximum cell in the game: 512-1024
+Average number of moves per game in individual directions/total: 50-70 moves per direction, 200-280 moves total
